@@ -2,4 +2,5 @@
 
 int main() {
     printf("Hallo bang!\n");
+    printf("Hallo ngab!\n");
 }
