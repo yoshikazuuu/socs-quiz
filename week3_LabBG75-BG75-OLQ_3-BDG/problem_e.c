@@ -4,21 +4,11 @@
 
 int counter = 0, factorial = 0;
 
-// void solve() {
-//     int a;
-//     scanf("%d", &a);
-//     for (int i = 1; i <= sqrt(a) / 2; i++) {
-//         if (a % i == 0) factorial++; 
-//     }
-// }
-
 void find_factors(int num){
-    for (int i=1; i<=sqrt(num); i++) {
+    for (int i=1; i <= sqrt(num); i++) {
         if (num % i == 0) {
-            if (num/i == i)
-                factorial++;
-            else
-                factorial += 2;
+            if (num/i == i) factorial++;
+            else factorial += 2;
         }
     }
 }
