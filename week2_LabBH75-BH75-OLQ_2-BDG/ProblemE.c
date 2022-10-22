@@ -1,34 +1,27 @@
 #include <stdio.h>
 
 int main(){
-    char time[1000];
+    char time[1001];
     int n, counter = 1;
     scanf("%d", &n);
     getchar();
-    while (n--) {
+
+    for (int i = 1; i <= n; i++) {
         scanf("%[^\n]", time);
         getchar();
-        if (time[6] == 'a') {
-            if (time[0] == '1' && time[1] == '2') {
-                time[0] = '0';
-                time[1] = '0';
+        int hour = (int) (time[0] - '0') * 10 + time[1] - '0';
+        int minute = (int) (time[3] - '0') * 10 + time[4] - '0';
+
+        if (time[6] == 'p') {
+            if (hour != 12) {
+                hour += 12;
             }
         } else {
-            if (time[0] == '0') {
-                time[0] = '1';
-                time[1] += 2;
-            } else if (time[1] != '2') {
-                time[0] = '2';
-                time[1] += 2;
+            if (hour == 12) {
+                hour -= 12;
             }
         }
-        
-        printf("Case #%d: ", counter);
-        counter++;
 
-        for (int i = 0; i < 5; i++) {
-            printf("%c", time[i]);
-        }
-        printf("\n");
-    }   
+        printf("Case #%d: %02d:%02d\n", i, hour, minute);
+    }
 }

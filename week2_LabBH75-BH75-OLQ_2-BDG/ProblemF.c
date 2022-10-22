@@ -1,15 +1,23 @@
 #include <stdio.h>
 
 int main(){
-	char n[1003];
-	int a = 0;
-	scanf("%s", &n);
+    char a[1003];
+    int counter = 0;
+    scanf("%s", a);
 
-	for(int i = 0; n[i] != '\0'; i++){
-	if(n[i] == 'p' && n[i + 1] =='o' && n[i + 2] == 'c' && n[i + 3] == 'u' && n[i + 4] == 's'){
-	a++;
-	}	
-}
-printf("%d\n", a);
-	return 0;
+    for (int i = 0; a[i] != '\0'; i++) {
+        if (a[i] == 'p') {
+            if (a[i + 1] == 'o') {
+                if (a[i + 2] == 'c') {
+                    if (a[i + 3] == 'u') {
+                        if (a[i + 4] == 's') {
+                            counter++;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    printf("%d\n", counter);
 }

@@ -1,23 +1,18 @@
 #include<stdio.h>
 
 int main(){
-	char s[100];
-	int n;
+	int x=3,n;
+	char s[102];
 	
-	scanf("%d %[^\n]s",&n, &s);
-	getchar();
-	scanf("%d %[^\n]s",&n, &s);
-	getchar();
-	scanf("%d %[^\n]s",&n, &s);
-	getchar();
+	for(int i = 0; i < x;i++){
+	scanf("%d",&n);
+	scanf("%[^\n]",s);
 	
-	char ss[100];
-	ss[0]=s[n];
-	ss[1]=s[1];
-	
-	printf("%s\n",&ss, s);
-	printf("%s\n",&ss, s);
-	printf("%s\n",&ss, s);
-	
+	char newS[102] = {'\0'};
+	newS[0]=s[n];
+	newS[1]=s[1];
+
+	printf("%s\n",newS);
+	}
 return 0;
 }
