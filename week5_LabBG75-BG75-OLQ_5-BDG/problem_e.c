@@ -14,7 +14,7 @@ int isThree(int n) {
         i++;
     }
 
-    for (int j = i - 1; j >= 0; j--) {
+    for (int j = 0; j < i; j++) {
         if (binaryNum[j] == 1) {
             oneCount++;
         } else continue;
