@@ -8,6 +8,7 @@ int counter = 1;
 int isThree(int n) {
     int binaryNum[32];
     int i = 0, flag = 0, oneCount = 0;
+    
     while (n > 0) {
         binaryNum[i] = n % 2;
         n = n / 2;
@@ -38,8 +39,7 @@ void solve() {
 
     for (int i = 0; i < x; i++) {
         for (int j = i + 1; j < x; j++) {
-            if (i == j) continue;
-            else if (isThree(arr[i]^arr[j])) countThree++;
+            if (isThree(arr[i]^arr[j])) countThree++;
             else countZero++;
         }
     }
