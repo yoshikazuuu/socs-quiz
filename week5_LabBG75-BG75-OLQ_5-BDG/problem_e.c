@@ -3,46 +3,48 @@
 #include <string.h>
 typedef unsigned long long ull;
 
-int decToBinary(int n) {
-    int temp[32];
-    int binaryNumber[32];
- 
-    int i = 0;
+int counter = 1;
+
+int isThree(int n) {
+    int binaryNum[32];
+    int i = 0, flag = 0, oneCount = 0;
     while (n > 0) {
-        temp[i] = n % 2;
+        binaryNum[i] = n % 2;
         n = n / 2;
         i++;
     }
 
-    int now = 0;
- 
     for (int j = i - 1; j >= 0; j--) {
-        binaryNumber[now] = temp[j];
-        now++;
+        if (binaryNum[j] == 1) {
+            oneCount++;
+        } else continue;
+        if (oneCount == 3) {
+            flag = 1;   
+            break;
+        }
     }
 
-    return binaryNumber;
+    return flag;
 }
 
 void solve() {
-    int x;
+    int x, countThree = 0, countZero = 0;
     scanf("%d", &x);
     int arr[x];
+
     for (int i = 0; i < x; i++) {
         scanf("%d", &arr[i]);
     }
-    int firstBinaryNumber[32] = decToBinary(arr[0]);
-    int first = sizeof(firstBinaryNumber)/sizeof(firstBinaryNumber[0]);
 
-    int secondBinaryNumber[32] = decToBinary(arr[1]);
-    int second = sizeof(secondBinaryNumber)/sizeof(secondBinaryNumber[0]);
-
-    int temp;
-    (first > second) ? temp ? 
-    for (int i = 0; i < ; ++) {
-        
+    for (int i = 0; i < x; i++) {
+        for (int j = 0; j < x; j++) {
+            if (i == j) continue;
+            else if (isThree(arr[i]^arr[j])) countThree++;
+            else countZero++;
+        }
     }
-    
+
+    printf("Case #%d: %d %d\n", counter++, countThree/2, countZero/2);
 }
 
 int main() {
