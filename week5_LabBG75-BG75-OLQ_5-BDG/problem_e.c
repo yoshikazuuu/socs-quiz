@@ -37,14 +37,14 @@ void solve() {
     }
 
     for (int i = 0; i < x; i++) {
-        for (int j = 0; j < x; j++) {
+        for (int j = i + 1; j < x; j++) {
             if (i == j) continue;
             else if (isThree(arr[i]^arr[j])) countThree++;
             else countZero++;
         }
     }
 
-    printf("Case #%d: %d %d\n", counter++, countThree/2, countZero/2);
+    printf("Case #%d: %d %d\n", counter++, countThree, countZero);
 }
 
 int main() {
