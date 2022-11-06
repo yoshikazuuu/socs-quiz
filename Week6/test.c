@@ -6,8 +6,8 @@
 #include <math.h>
 
 int main(){
-  printf("Hello Dunia\n");
-  printf("Hallo aldo!\n");
+  printf("asdfasdfa Dunia\n");
+  printf("asdfasdfasdf aldo!\n");
   printf("Kode bentrok");
 
 
