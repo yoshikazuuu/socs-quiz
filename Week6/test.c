@@ -8,10 +8,9 @@
 int main(){
   printf("Hello Dunia\n");
   printf("Hallo aldo!\n");
-  printf("Saya tinggal di ciwastra\n");
 
 
 
-  printf("Hallo\n")
+  printf("Hallo\n");
 ;  return 0;
 }
