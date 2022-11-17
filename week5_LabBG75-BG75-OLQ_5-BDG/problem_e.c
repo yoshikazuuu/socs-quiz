@@ -24,7 +24,6 @@ int isThree(int n) {
             break;
         }
     }
-
     return flag;
 }
 

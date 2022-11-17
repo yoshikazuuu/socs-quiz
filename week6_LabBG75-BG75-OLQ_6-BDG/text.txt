@@ -1,0 +1,15 @@
+beli 4 3 10
+tukat 2 2 2
+
+kosong 4 3 10
+dapet 2 1 5
+
+kosong 2 2 5
+dapet 1 1 2
+
+kosong 3
+dapet 
+
+3 + 4 = 7
+3 + 2 = 5
+
