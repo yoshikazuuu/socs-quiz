@@ -6,14 +6,14 @@
 ll n;
 
 typedef struct {
-  char name[41];
+  char name[101];
   ll a;
   ll b;
   ll c;
 } Student;
 
 typedef struct {
-  char name[41];
+  char name[101];
   double avg;
 } Average;
 
@@ -24,8 +24,9 @@ int main() {
   Average dataAvg[n];
 
   for (int i = 0; i < n; i++) {
-    scanf("%[^#]#%lld#%lld#%lld\n", data[i].name, &data[i].a, &data[i].b,
+    scanf("%[^#]#%lld#%lld#%lld", data[i].name, &data[i].a, &data[i].b,
           &data[i].c);
+    getchar();
   }
 
   for (int i = 0; i < n; i++) {
