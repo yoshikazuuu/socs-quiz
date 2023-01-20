@@ -17,7 +17,7 @@ Public archive for https://socs1.binus.ac.id/.
 
 If you're pretty capable to contribute this repository, please contribute.
 
-## :busts_in_silhouette: <samp>Contributors</samp>
+## Contributors
 <a href="https://github.com/Yoshikazuuu/socs-quiz/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=yoshikazuuu/socs-quiz"/>
 </a>
